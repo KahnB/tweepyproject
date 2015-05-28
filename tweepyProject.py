@@ -1,6 +1,6 @@
 #This is a Python program that will work in the command line/IDLE and performs basic functions using the Twitter API wrapper Tweepy.
 #This must be run in Python 2.7 as the Tweepy version used was compatible with 2.7. This will be updated if Tweepy adds support for Python 3.
-#for a sample key, please see the readme.
+
 
 import tweepy, time, sys, json
 from tweepy import Stream
@@ -123,8 +123,7 @@ def friendsList(ckey,csecret,atoken,asecret,auth,api):
         api.destroy_friendship(enemy)
         mainMenu(ckey,csecret,atoken,asecret,auth,api)
     else:
-        print("Please try again.")
-        friendsList(ckey,csecret,atoken,asecret,auth,api)
+        mainMenu(ckey,csecret,atoken,asecret,auth,api)
             
 
 main()
